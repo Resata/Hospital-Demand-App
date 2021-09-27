@@ -1,0 +1,2 @@
+# Hospital-Demand-App
+For this industry project, participants are assigned to build a demand model for the New Zealand Government Public Health administrator. The model must be based on private hospital discharge records. This is an end to end project where the assessment is not merely based on the model but the entire application(s). To that effect, participants have to create a User Interface that allows a Government PH administrator to input new variables in the application(s) which will populate or retrieve updated output.
