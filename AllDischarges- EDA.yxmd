@@ -1,0 +1,1114 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.2">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\sss-a\Desktop\Capstone\alldischarges.csv</File>
+          <FormatSpecificOptions>
+            <HeaderRow>True</HeaderRow>
+            <IgnoreErrors>False</IgnoreErrors>
+            <AllowShareWrite>False</AllowShareWrite>
+            <ImportLine>1</ImportLine>
+            <FieldLen>254</FieldLen>
+            <SingleThreadRead>False</SingleThreadRead>
+            <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+            <Delimeter>,</Delimeter>
+            <QuoteRecordBreak>False</QuoteRecordBreak>
+            <CodePage>28591</CodePage>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>alldischarges.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FinancialYear" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="DHB" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="Sex" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="AgeGroup" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="ICDCode" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="ICDThreeChar" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="ICDSubgroup" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="ICDChapter" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="Discharges" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="MeanStay" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="TotalDischarges" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+            <Field name="SingleDayDischarge" size="254" source="File: C:\Users\sss-a\Desktop\Capstone\alldischarges.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="138" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sss-a\AppData\Local\Temp\Engine_16032_4b119c0c405041eea00edf0078ebf00a_\Engine_13308_f64bfed74d2f4c139fda618e3df2adc1_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="ICDThreeChar" selected="False" />
+            <SelectField field="ICDSubgroup" selected="False" />
+            <SelectField field="ICDChapter" selected="False" />
+            <SelectField field="Discharges" selected="True" type="Int32" size="4" />
+            <SelectField field="MeanStay" selected="True" rename="MeanStay (days)" type="Double" size="8" />
+            <SelectField field="TotalDischarges" selected="True" type="Int32" size="4" />
+            <SelectField field="SingleDayDischarge" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="246" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="AgeGroup" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AgeGroup - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="330" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="AgeGroup" action="GroupBy" rename="AgeGroup" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="330" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([AgeGroup], &quot;9-May&quot;, &quot;05-09&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;14-Oct&quot;, &quot;10-14&quot;)" field="AgeGroup" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AgeGroup = Replace([AgeGroup], "9-May", "05-09")
+AgeGroup = Replace([AgeGroup], ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="438" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([AgeGroup], &quot;0&quot;, &quot;1&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;05-09&quot;, &quot;2&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;10-14&quot;, &quot;3&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;15-19&quot;, &quot;4&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;20-24&quot;, &quot;5&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;25-29&quot;, &quot;6&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;30-34&quot;, &quot;7&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;35-39&quot;, &quot;8&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;40-44&quot;, &quot;9&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;45-49&quot;, &quot;10&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;50-54&quot;, &quot;11&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;55-59&quot;, &quot;12&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;60-64&quot;, &quot;13&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;65-69&quot;, &quot;14&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;70-74&quot;, &quot;15&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;75-79&quot;, &quot;16&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;80-84&quot;, &quot;17&quot;)" field="AgeGroup" size="254" type="V_String" />
+            <FormulaField expression="Replace([AgeGroup], &quot;85+&quot;, &quot;18&quot;)" field="AgeGroup" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AgeGroup = Replace([AgeGroup], "0", "1")
+AgeGroup = Replace([AgeGroup], "05-09",...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="426" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="AgeGroup" action="GroupBy" rename="AgeGroup" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="534" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sss-a\AppData\Local\Temp\Engine_16032_4b119c0c405041eea00edf0078ebf00a_\Engine_13308_64c8ef221f7b42e08383ec1fd11ec88a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="534" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([Sex], &quot;Male&quot;, &quot;0&quot;)" field="Sex" size="254" type="V_String" />
+            <FormulaField expression="Replace([Sex], &quot;Female&quot;, &quot;1&quot;)" field="Sex" size="254" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[Sex = Replace([Sex], "Male", "0")
+Sex = Replace([Sex], "Female", "1")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="726" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>bar</type>
+              <xsrc>Sex</xsrc>
+              <ysrc>MeanStay (days)</ysrc>
+              <aggregationField>ysrc</aggregationField>
+              <aggregationFunction>sum</aggregationFunction>
+              <aggregationFieldName>MeanStay (days)</aggregationFieldName>
+              <name>Sex VS Mean Stay</name>
+            </Traces>
+            <Layout>
+              <title>
+                <text>
+                </text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+                <size>14</size>
+              </font>
+              <autosize>false</autosize>
+              <width>500</width>
+              <height>600</height>
+              <xaxis>
+                <range>-0.5</range>
+                <range>1.5</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Sex</text>
+                </title>
+                <type>category</type>
+                <tickfont>
+                  <size>14</size>
+                </tickfont>
+                <nticks>0</nticks>
+              </xaxis>
+              <yaxis>
+                <range>0</range>
+                <range>56476.105263157187</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>MeanStay (days)</text>
+                </title>
+                <type>linear</type>
+              </yaxis>
+              <margin>
+                <pad>0</pad>
+                <t>100</t>
+                <b>80</b>
+                <l>80</l>
+                <r>80</r>
+              </margin>
+              <hovermode>closest</hovermode>
+              <showlegend>true</showlegend>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="834" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sss-a\AppData\Local\Temp\Engine_16032_4b119c0c405041eea00edf0078ebf00a_\Engine_13308_0db6aa73251247afbbec9f7b2aa408a6_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="726" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>scatter</type>
+              <mode>lines</mode>
+              <xsrc>ICDCode</xsrc>
+              <ysrc>Discharges</ysrc>
+              <orientation>v</orientation>
+              <stackgroup>1</stackgroup>
+              <aggregationField>ysrc</aggregationField>
+              <aggregationFunction>count</aggregationFunction>
+              <aggregationFieldName>Discharges</aggregationFieldName>
+            </Traces>
+            <Layout>
+              <title>
+                <text>
+                </text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+              </font>
+              <autosize>false</autosize>
+              <width>700</width>
+              <height>849</height>
+              <xaxis>
+                <range>0</range>
+                <range>740</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>ICDCode</text>
+                </title>
+                <type>category</type>
+              </xaxis>
+              <yaxis>
+                <range>0</range>
+                <range>556.84210526315792</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>Discharges</text>
+                </title>
+                <type>linear</type>
+              </yaxis>
+              <margin>
+                <pad>0</pad>
+                <t>100</t>
+                <b>80</b>
+                <l>80</l>
+                <r>80</r>
+              </margin>
+              <legend>
+                <x>1.0370454545454546</x>
+                <y>1.1449925261584455</y>
+              </legend>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="822" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sss-a\AppData\Local\Temp\Engine_16032_4b119c0c405041eea00edf0078ebf00a_\Engine_13308_6e4d2148951c422daf44febe2059b97d_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="726" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>pie</type>
+              <mode>markers</mode>
+              <labelssrc>DHB</labelssrc>
+              <name>DHB&amp;nbsp;</name>
+              <valuessrc>Discharges</valuessrc>
+            </Traces>
+            <Layout>
+              <title>
+                <text>
+                </text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+                <size>12</size>
+              </font>
+              <autosize>false</autosize>
+              <width>700</width>
+              <height>849</height>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+              <xaxis>
+                <range>-1</range>
+                <range>6</range>
+                <autorange>true</autorange>
+              </xaxis>
+              <yaxis>
+                <range>-1</range>
+                <range>4</range>
+                <autorange>true</autorange>
+              </yaxis>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="822" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sss-a\AppData\Local\Temp\Engine_16032_4b119c0c405041eea00edf0078ebf00a_\Engine_13308_8b18a7a79bb54d5b8233cf2809e09617_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="PlotlyCharting">
+        <Position x="726" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ChartingFields>
+            <Traces json:Array="true" xmlns:json="http://james.newtonking.com/projects/json">
+              <type>bar</type>
+              <mode>lines</mode>
+              <xsrc>ICDCode</xsrc>
+              <ysrc>MeanStay (days)</ysrc>
+              <orientation>v</orientation>
+              <name>Mean Stay VS DHB</name>
+              <aggregationField>ysrc</aggregationField>
+              <aggregationFunction>max</aggregationFunction>
+              <aggregationFieldName>MeanStay (days)</aggregationFieldName>
+            </Traces>
+            <Layout>
+              <title>
+                <text>
+                </text>
+              </title>
+              <font>
+                <family>sans-serif</family>
+              </font>
+              <autosize>false</autosize>
+              <width>700</width>
+              <height>849</height>
+              <showlegend>true</showlegend>
+              <hovermode>closest</hovermode>
+              <xaxis>
+                <range>-0.5</range>
+                <range>740.5</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>ICDCode</text>
+                </title>
+                <type>category</type>
+              </xaxis>
+              <yaxis>
+                <range>0</range>
+                <range>1349.4736842105262</range>
+                <autorange>true</autorange>
+                <title>
+                  <text>MeanStay (days)</text>
+                </title>
+                <type>linear</type>
+              </yaxis>
+            </Layout>
+          </ChartingFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="ComposerInteractiveCharting" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="822" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\sss-a\AppData\Local\Temp\Engine_16032_4b119c0c405041eea00edf0078ebf00a_\Engine_13308_8ef512fe717b4e91905007f3ca92f26b_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="44">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="174" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([FinancialYear], &quot;2013/14&quot;, &quot;1&quot;)" field="FinancialYear" size="255" type="V_String" />
+            <FormulaField expression="Replace([FinancialYear], &quot;2014/15&quot;, &quot;2&quot;)" field="FinancialYear" size="255" type="V_String" />
+            <FormulaField expression="Replace([FinancialYear], &quot;2015/16&quot;, &quot;3&quot;)" field="FinancialYear" size="255" type="V_String" />
+            <FormulaField expression="Replace([FinancialYear], &quot;2016/17&quot;, &quot;4&quot;)" field="FinancialYear" size="255" type="V_String" />
+            <FormulaField expression="Replace([FinancialYear], &quot;2017/18&quot;, &quot;5&quot;)" field="FinancialYear" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FinancialYear = Replace([FinancialYear], "2013/14", "1")
+FinancialYear = Replace...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="45">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sort.Sort">
+        <Position x="246" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SortInfo locale="1033">
+            <Field field="DHB" order="Ascending" />
+          </SortInfo>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DHB - Ascending</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSort" />
+    </Node>
+    <Node ToolID="46">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="402" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Replace([DHB], &quot;Auckland&quot;, &quot;1&quot;) &#xA;&#xA;" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Bay of Plenty&quot;, &quot;2&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Canterbury&quot;, &quot;3&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Capital and Coast&quot;, &quot;4&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Counties Manukau&quot;, &quot;5&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Hawke's Bay&quot;, &quot;6&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Hutt Valley&quot;, &quot;7&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Lakes&quot;, &quot;8&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Midcentral&quot;, &quot;9&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Nelson Marlborough&quot;, &quot;10&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Northland&quot;, &quot;11&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;South Canterbury&quot;, &quot;12&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Southern&quot;, &quot;13&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Tairawhiti&quot;, &quot;14&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Taranaki&quot;, &quot;15&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Unknown&quot;, &quot;16&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Waikato&quot;, &quot;17&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Wairarapa&quot;, &quot;18&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Waitemata&quot;, &quot;19&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;West Coast&quot;, &quot;20&quot;)" field="DHB" size="255" type="V_String" />
+            <FormulaField expression="Replace([DHB], &quot;Whanganui&quot;, &quot;21&quot;)" field="DHB" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DHB = Replace([DHB], "Auckland", "1") 
+
+
+DHB = Replace([DHB], "Bay of Plenty", "...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="47">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="330" y="438" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="DHB" action="GroupBy" rename="DHB" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="50">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>AllDischarges_clean_1.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FinancialYear" size="255" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="DHB" size="255" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Sex" size="255" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="AgeGroup" size="255" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="ICDCode" size="255" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Discharges" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="MeanStay (days)" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="TotalDischarges" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="SingleDayDischarge" source="File: C:\Users\sss-a\Desktop\Capstone\AllDischarges_clean_1.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="53">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="510" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="Left([ICDCode], 1)&#xA;" field="ICDCode" size="255" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[ICDCode = Left([ICDCode], 1)
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="54">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="618" y="474" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="ICDCode" action="GroupBy" rename="ICDCode" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="55">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="510" y="582" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="21" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="Chapter" />
+          </Fields>
+          <Data>
+            <r>
+              <c>A</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>B</c>
+              <c>1</c>
+            </r>
+            <r>
+              <c>C</c>
+              <c>2</c>
+            </r>
+            <r>
+              <c>D</c>
+              <c>2, 3</c>
+            </r>
+            <r>
+              <c>E</c>
+              <c>4</c>
+            </r>
+            <r>
+              <c>F</c>
+              <c>5</c>
+            </r>
+            <r>
+              <c>G</c>
+              <c>6</c>
+            </r>
+            <r>
+              <c>H</c>
+              <c>7</c>
+            </r>
+            <r>
+              <c>I</c>
+              <c>8</c>
+            </r>
+            <r>
+              <c>J</c>
+              <c>9</c>
+            </r>
+            <r>
+              <c>K</c>
+              <c>10</c>
+            </r>
+            <r>
+              <c>L</c>
+              <c>11</c>
+            </r>
+            <r>
+              <c>M</c>
+              <c>12</c>
+            </r>
+            <r>
+              <c>N</c>
+              <c>13</c>
+            </r>
+            <r>
+              <c>O</c>
+              <c>14</c>
+            </r>
+            <r>
+              <c>P</c>
+              <c>15</c>
+            </r>
+            <r>
+              <c>Q</c>
+              <c>16</c>
+            </r>
+            <r>
+              <c>R</c>
+              <c>17</c>
+            </r>
+            <r>
+              <c>S</c>
+              <c>18</c>
+            </r>
+            <r>
+              <c>T</c>
+              <c>19</c>
+            </r>
+            <r>
+              <c>Z</c>
+              <c>20</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="56">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.FindReplace.FindReplace">
+        <Position x="606" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldFind>ICDCode</FieldFind>
+          <FieldSearch>Field1</FieldSearch>
+          <ReplaceFoundField>Field2</ReplaceFoundField>
+          <FindMode>FindAny</FindMode>
+          <NoCase value="False" />
+          <MatchWholeWord value="False" />
+          <ReplaceMode>Append</ReplaceMode>
+          <ReplaceMultipleFound value="True" />
+          <ReplaceAppendFields>
+            <Field field="Field1" />
+            <Field field="Chapter" />
+          </ReplaceAppendFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFindReplace" />
+    </Node>
+    <Node ToolID="57">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="690" y="534" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="FinancialYear" selected="True" />
+            <SelectField field="DHB" selected="True" />
+            <SelectField field="Sex" selected="True" />
+            <SelectField field="AgeGroup" selected="True" />
+            <SelectField field="Field2" selected="True" rename="ICD Chapter" />
+            <SelectField field="ICDCode" selected="False" />
+            <SelectField field="Discharges" selected="True" />
+            <SelectField field="MeanStay (days)" selected="True" />
+            <SelectField field="TotalDischarges" selected="True" />
+            <SelectField field="SingleDayDischarge" selected="True" />
+            <SelectField field="Field1" selected="False" />
+            <SelectField field="Chapter" selected="True" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="22" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="44" Connection="Output" />
+      <Destination ToolID="45" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="46" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="45" Connection="Output" />
+      <Destination ToolID="47" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="46" Connection="Output" />
+      <Destination ToolID="53" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="50" Connection="Output" />
+      <Destination ToolID="44" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="54" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="53" Connection="Output" />
+      <Destination ToolID="56" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="55" Connection="Output" />
+      <Destination ToolID="56" Connection="Source" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="56" Connection="Output" />
+      <Destination ToolID="57" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>AllDischarges- EDA</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="92febafe-81a1-42e8-ae7d-c8482c4fcec5" />
+      <Telemetry>
+        <PreviousWorkflowId value="54fd2493-8a2c-4eae-b3ab-5df0ac22358c" />
+        <OriginWorkflowId value="92febafe-81a1-42e8-ae7d-c8482c4fcec5" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
